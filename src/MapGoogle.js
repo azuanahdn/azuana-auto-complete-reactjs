@@ -41,7 +41,7 @@ class MapGoogle extends Component {
         lng: 101.6869
       }
     };
-  console.log(this.state.mapPosition, 'mapPosition');
+  console.log(this.state.mapPosition.lat, 'mapPosition');
 
   }
  
@@ -273,7 +273,7 @@ class MapGoogle extends Component {
       ))
     );
     let map;
-    if (this.props.center.lat !== undefined) {
+    if (this.state.mapPosition.lat !== undefined) {
       map = (
         <div>
           <div classname="col">
@@ -348,4 +348,4 @@ class MapGoogle extends Component {
     return map;
   }
 }
-export default withStyles(styles) (MapGoogle);
+export default withStyles(styles)(MapGoogle);
